@@ -2,12 +2,58 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>Job Scraper</title>
 
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-    <script type="module" src="/src/renderer.js"></script>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="page active">
+      <h1>Welcome to Job Scraper</h1>
+      <p>Find your next opportunity</p>
+      <button id="loginBtn" class="btn">Login</button>
+      <button id="signupBtn" class="btn btn-secondary">Create Account</button>
+    </div>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="page">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="btn">Sign In</button>
+        <button type="button" id="backFromLoginBtn" class="btn btn-secondary">Back</button>
+        <p class="signup-link">Don't have an account? <button type="button" id="toSignupBtn" class="link-btn">Sign up</button></p>
+      </form>
+    </div>
+
+    <!-- Signup Page -->
+    <div id="signupPage" class="page">
+      <h1>Create Account</h1>
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="signupUsername">Username:</label>
+          <input type="text" id="signupUsername" name="signupUsername" required />
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password:</label>
+          <input type="password" id="signupPassword" name="signupPassword" required />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required />
+        </div>
+        <button type="submit" class="btn">Create Account</button>
+        <button type="button" id="toLoginBtn" class="btn btn-link">Already have an account? Login</button>
+        <button type="button" id="backFromSignupBtn" class="btn btn-secondary">Back</button>
+      </form>
+    </div>
+
+    <script type="module" src="/src/renderer.ts"></script>
   </body>
 </html>
