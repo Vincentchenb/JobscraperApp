@@ -54,6 +54,64 @@
       </form>
     </div>
 
+    <!-- Categories Selection Page -->
+    <div id="categoriesPage" class="page">
+      <h1>Select Job Categories</h1>
+      <p>Choose the categories you're interested in</p>
+      <form id="categoriesForm">
+        <div class="categories-grid">
+          <label class="category-checkbox">
+            <input type="checkbox" name="category" value="Software Engineering" />
+            <span>Software Engineering</span>
+          </label>
+          <label class="category-checkbox">
+            <input type="checkbox" name="category" value="Data Science" />
+            <span>Data Science</span>
+          </label>
+          <label class="category-checkbox">
+            <input type="checkbox" name="category" value="Product Management" />
+            <span>Product Management</span>
+          </label>
+          <label class="category-checkbox">
+            <input type="checkbox" name="category" value="Design" />
+            <span>Design</span>
+          </label>
+          <label class="category-checkbox">
+            <input type="checkbox" name="category" value="Marketing" />
+            <span>Marketing</span>
+          </label>
+          <label class="category-checkbox">
+            <input type="checkbox" name="category" value="Sales" />
+            <span>Sales</span>
+          </label>
+          <label class="category-checkbox">
+            <input type="checkbox" name="category" value="DevOps" />
+            <span>DevOps</span>
+          </label>
+          <label class="category-checkbox">
+            <input type="checkbox" name="category" value="Finance" />
+            <span>Finance</span>
+          </label>
+        </div>
+        <button type="submit" class="btn">Continue</button>
+      </form>
+    </div>
+
+    <!-- Jobs List Page -->
+    <div id="jobsListPage" class="page">
+      <div class="jobs-header">
+        <h1>Recent Jobs</h1>
+        <div class="jobs-controls">
+          <button id="filterBtn" class="btn btn-secondary">Filter</button>
+          <button id="settingsBtn" class="btn btn-secondary">Settings</button>
+          <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+        </div>
+      </div>
+      <div id="jobsList" class="jobs-container">
+        <!-- Jobs will be populated here -->
+      </div>
+    </div>
+
     <script type="module" src="/src/renderer.ts"></script>
   </body>
 </html>

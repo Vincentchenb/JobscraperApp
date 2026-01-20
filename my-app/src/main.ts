@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
-import { createUser, authenticateUser } from './database';
+import { createUser, authenticateUser, saveUserPreferences } from './database';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
@@ -15,6 +15,10 @@ ipcMain.handle('signup', async (event, username: string, password: string) => {
 
 ipcMain.handle('login', async (event, username: string, password: string) => {
   return authenticateUser(username, password);
+});
+
+ipcMain.handle('savePreferences', async (event, userId: number, categories: string[]) => {
+  return saveUserPreferences(userId, categories);
 });
 
 const createWindow = () => {
