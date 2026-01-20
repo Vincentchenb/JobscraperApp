@@ -1,4 +1,4 @@
-<img width="795" height="570" alt="image" src="https://github.com/user-attachments/assets/b30df34b-b007-48f5-924e-88c2bdb38445" /># JobPulse 🚀 
+# JobPulse 🚀 
 ### Automated Desktop Job Aggregator & AI Matcher
 
 JobScraper is a high-performance cross-platform desktop application built with **Electron** and **React**. It streamlines the job search process by aggregating listings from multiple platforms via RESTful APIs and using **Gemini AI** to provide real-time compatibility scores between job descriptions and user resumes.
@@ -6,8 +6,7 @@ JobScraper is a high-performance cross-platform desktop application built with *
 ---
 
 ## 📸 Project Preview
-!(screenshots/dashboard-preview.png)
-> <img width="795" height="570" alt="image" src="https://github.com/user-attachments/assets/7a8322d0-4862-43f2-8dfb-097cd82142f7" />
+<img width="795" height="570" alt="image" src="https://github.com/user-attachments/assets/7a8322d0-4862-43f2-8dfb-097cd82142f7" />
 
 
 ---
@@ -34,6 +33,7 @@ JobScraper is a high-performance cross-platform desktop application built with *
 
 ## 🏗️ Whats inside
 JobPulse follows Electron security best practices by utilizing a **Multi-Process Architecture**:
+```bash
 my-app/
 ├── src/
 │   ├── assets/              # Static assets (images, background art)
@@ -53,6 +53,7 @@ my-app/
 ├── vite.main.config.ts      # Vite config for the Main process
 ├── vite.preload.config.ts   # Vite config for the Preload script
 └── vite.renderer.config.ts  # Vite config for the React UI
+```
 ---
 
 ## 🚀 Getting Started
