@@ -1,13 +1,14 @@
-# JobPulse 🚀 
+<img width="795" height="570" alt="image" src="https://github.com/user-attachments/assets/b30df34b-b007-48f5-924e-88c2bdb38445" /># JobPulse 🚀 
 ### Automated Desktop Job Aggregator & AI Matcher
 
-JobPulse is a high-performance cross-platform desktop application built with **Electron** and **React**. It streamlines the job search process by aggregating listings from multiple platforms via RESTful APIs and using **Gemini AI** to provide real-time compatibility scores between job descriptions and user resumes.
+JobScraper is a high-performance cross-platform desktop application built with **Electron** and **React**. It streamlines the job search process by aggregating listings from multiple platforms via RESTful APIs and using **Gemini AI** to provide real-time compatibility scores between job descriptions and user resumes.
 
 ---
 
 ## 📸 Project Preview
-![App Dashboard Placeholder](screenshots/dashboard-preview.png)
-> *[Instructions: Replace the image above with a screenshot of your main app screen]*
+!(screenshots/dashboard-preview.png)
+> <img width="795" height="570" alt="image" src="https://github.com/user-attachments/assets/7a8322d0-4862-43f2-8dfb-097cd82142f7" />
+
 
 ---
 
@@ -31,16 +32,27 @@ JobPulse is a high-performance cross-platform desktop application built with **E
 
 ---
 
-## 🏗️ Technical Architecture
+## 🏗️ Whats inside
 JobPulse follows Electron security best practices by utilizing a **Multi-Process Architecture**:
-
-1. **Main Process (Node.js):** Handles system-level tasks, SQLite database management, and AI/Job API requests.
-2. **Preload Script:** A secure bridge that exposes specific, safe IPC (Inter-Process Communication) methods to the UI.
-3. **Renderer Process (React):** A high-performance UI that manages application state and user interactions.
-
-![Architecture Diagram](screenshots/architecture-diagram.png)
-> *[Instructions: Add a diagram showing the flow between Electron Main, Preload, and React]*
-
+my-app/
+├── src/
+│   ├── assets/              # Static assets (images, background art)
+│   │   └── background.jpg   # App background image
+│   ├── database.ts          # SQLite initialization and better-sqlite3 logic
+│   ├── main.ts              # Electron Main Process (Node.js, API calls, DB I/O)
+│   ├── preload.ts           # Secure IPC Bridge (Context Isolation layer)
+│   ├── renderer.tsx         # React Entry Point (Vite Renderer Process)
+│   ├── App.tsx              # Main React Component (UI State & Views)
+│   └── index.css            # Global styles and Tailwind imports
+├── .gitignore               # Excludes node_modules, .env, and jobs.db
+├── forge.config.ts          # Electron Forge build configuration
+├── index.html               # Vite entry HTML file
+├── jobs.db                  # Local SQLite database (Auto-generated)
+├── package.json             # Project dependencies and scripts
+├── tsconfig.json            # TypeScript configuration
+├── vite.main.config.ts      # Vite config for the Main process
+├── vite.preload.config.ts   # Vite config for the Preload script
+└── vite.renderer.config.ts  # Vite config for the React UI
 ---
 
 ## 🚀 Getting Started
@@ -54,3 +66,16 @@ JobPulse follows Electron security best practices by utilizing a **Multi-Process
    ```bash
    git clone [https://github.com/Vincentchenb/JobscraperApp.git](https://github.com/Vincentchenb/JobscraperApp.git)
    cd JobscraperApp/my-app
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   
+3. **Set up environment variables:** Create a .env file in the root directory:
+   ```Code Snippet
+   GEMINI_API_KEY=your_gemini_key
+   RAPID_API_KEY=your_jsearch_key
+   
+4. **Launch the application:**
+   ```bash
+   npm start
