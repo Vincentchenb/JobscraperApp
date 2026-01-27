@@ -1,4 +1,4 @@
-# JobPulse 🚀 
+# Job Aggregator App
 ### Automated Desktop Job Aggregator & AI Matcher
 
 JobScraper is a high-performance cross-platform desktop application built with **Electron** and **React**. It streamlines the job search process by aggregating listings from multiple platforms via RESTful APIs and using **Gemini AI** to provide real-time compatibility scores between job descriptions and user resumes.
